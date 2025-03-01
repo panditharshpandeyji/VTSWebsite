@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "../styles/Home.css";
 import student from "../assets/student.png";
-import Courses from "../components/courses";
+import Courses from "../components/Courses";
 
 const HomePage = () => {
   const [menuOpen, setMenuOpen] = useState(false);

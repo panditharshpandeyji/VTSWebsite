@@ -4,6 +4,7 @@ import "../styles/Home.css";
 import student from "../assets/student.png";
 import Courses from "../components/Allcourses";
 import Navbar from "../components/Navbar";
+import ContactUs from "./ContactUs";
 
 const HomePage = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -33,6 +34,7 @@ const HomePage = () => {
         </div>
       </section>
       <Courses />
+      <ContactUs />
     </div>
   );
 };

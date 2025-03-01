@@ -1,5 +1,6 @@
 import "./App.css";
 import CourseDetails from "./components/CourseDetails";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
 import ContactUs from "./pages/ContactUs";
@@ -17,6 +18,7 @@ function App() {
           <Route path="/course/:id" element={<CourseDetails />} />
           <Route path="/contact" element={<ContactUs />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

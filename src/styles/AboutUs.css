@@ -1,0 +1,96 @@
+.about-page {
+    font-family: "Arial", sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+
+.highlight {
+    color: #0056b3;
+}
+
+/* Sections */
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 5%;
+    background: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.alternate {
+    background: #eef7ff;
+}
+
+.content {
+    width: 45%;
+    text-align: left;
+}
+
+.content h2 {
+    font-size: 35px;
+    color: #1e89fb;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.content ul {
+    padding-left: 20px;
+}
+
+.content ul li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.image-container {
+    width: 50%;
+    text-align: center;
+}
+
+.image-container img {
+    width: 80%;
+    max-width: 500px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Join Button */
+.join-btn {
+    padding: 12px 20px;
+    background: #1e89fb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.join-btn:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 5%;
+    }
+
+    .alternate {
+        flex-direction: column-reverse;
+    }
+
+    .image-container,
+    .content {
+        width: 100%;
+    }
+}

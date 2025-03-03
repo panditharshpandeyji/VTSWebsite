@@ -5,9 +5,15 @@ import student from "../assets/student.png";
 import Courses from "../components/Allcourses";
 import Navbar from "../components/Navbar";
 import ContactUs from "./ContactUs";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleJoinClick = (id) => {
+    navigate(`/courses`);
+  };
 
   return (
     <div className="homepage">
@@ -27,7 +33,9 @@ const HomePage = () => {
             Unlock your potential with expert-led courses in programming,
             full-stack development, and data structures.
           </p>
-          <button className="join-btn">Join Now</button>
+          <button className="join-btn" onClick={handleJoinClick}>
+            Join Now
+          </button>
         </div>
         <div className="hero-image">
           <img src={student} alt="Learning" />

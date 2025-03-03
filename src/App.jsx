@@ -1,4 +1,5 @@
 import "./App.css";
+import Courses from "./components/Allcourses";
 import CourseDetails from "./components/CourseDetails";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -16,6 +17,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/courses" element={<Courses />} />
           <Route path="/course/:id" element={<CourseDetails />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/about" element={<AboutUs />} />

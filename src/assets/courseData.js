@@ -8,16 +8,17 @@ const coursesData = [
     id: "programming-dsa",
     title: "Programming Foundation with DSA",
     description:
-      "Master Data Structures & Algorithms to crack top tech interviews.",
+      "Master C++/Java, Data Structures & Algorithms to crack top tech interviews.",
     details: {
       languages: ["C++", "Java"],
       topics: [
+        "Master in Java or C++",
         "Data Structures & Algorithms",
         "Problem Solving Strategies",
         "Competitive Programming",
       ],
       platforms: ["LeetCode", "GeeksforGeeks"],
-      projects: ["Algorithm Visualizer", "Coding Challenges"],
+      projects: ["leetcode", "GeeksforGeeks"],
     },
     image: programmingWithDsa,
   },

@@ -34,9 +34,9 @@ const Footer = () => {
 
         <div className="footer-contact">
           <h3>Contact Us</h3>
-          <p>Email: support@vts.com</p>
-          <p>Phone: +91 98765 43210</p>
-          <p>Location: India</p>
+          <p>Email: harsh4105pandey@gmail.com</p>
+          <p>Phone: +91 6268766120</p>
+          <p>Location: Indore (M.P)</p>
         </div>
       </div>
 

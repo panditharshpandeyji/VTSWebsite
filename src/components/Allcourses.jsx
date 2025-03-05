@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "../styles/Courses.css";
 import courses from "../assets/courseData";
+import ContactUs from "../pages/ContactUs";
 
 const Courses = () => {
   const navigate = useNavigate();
@@ -30,6 +31,8 @@ const Courses = () => {
           </div>
         ))}
       </div>
+
+      <ContactUs />
     </section>
   );
 };

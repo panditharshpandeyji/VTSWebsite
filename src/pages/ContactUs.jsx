@@ -52,61 +52,73 @@ const ContactUs = () => {
   };
 
   return (
-    <section className="contact-us">
-      <h2>Contact Us</h2>
-      <p>Have questions? We'd love to hear from you.</p>
+    <section className="contact-us-container">
+      <div className="contact-heading">
+        <h2>Contact Us</h2>
+        <p>Have questions? We'd love to hear from you.</p>
+      </div>
 
       {/* Toast Notification Container */}
       <ToastContainer />
 
-      <Formik
-        initialValues={{
-          name: "",
-          email: "",
-          phone: "",
-          subject: "",
-          message: "",
-        }}
-        validationSchema={validationSchema}
-        onSubmit={handleSubmit}
-      >
-        {({ isSubmitting }) => (
-          <Form className="contact-form">
-            <div className="input-group">
-              <Field type="text" name="name" placeholder="Your Name" />
-              <ErrorMessage name="name" component="p" className="error" />
-            </div>
+      <div className="contact-form-container">
+        <Formik
+          initialValues={{
+            name: "",
+            email: "",
+            phone: "",
+            subject: "",
+            message: "",
+          }}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}
+        >
+          {({ isSubmitting }) => (
+            <Form className="contact-form">
+              <div className="input-group">
+                <Field type="text" name="name" placeholder="Your Name" />
+                <ErrorMessage name="name" component="p" className="error" />
+              </div>
 
-            <div className="input-group">
-              <Field type="email" name="email" placeholder="Your Email" />
-              <ErrorMessage name="email" component="p" className="error" />
-            </div>
+              <div className="input-group">
+                <Field type="email" name="email" placeholder="Your Email" />
+                <ErrorMessage name="email" component="p" className="error" />
+              </div>
 
-            <div className="input-group">
-              <Field type="text" name="phone" placeholder="Your Phone Number" />
-              <ErrorMessage name="phone" component="p" className="error" />
-            </div>
+              <div className="input-group">
+                <Field
+                  type="text"
+                  name="phone"
+                  placeholder="Your Phone Number"
+                />
+                <ErrorMessage name="phone" component="p" className="error" />
+              </div>
 
-            <div className="input-group">
-              <Field
-                type="text"
-                name="subject"
-                placeholder="Subject (Optional)"
-              />
-              <ErrorMessage name="subject" component="p" className="error" />
-            </div>
+              <div className="input-group">
+                <Field
+                  type="text"
+                  name="subject"
+                  placeholder="Subject (Optional)"
+                />
+                <ErrorMessage name="subject" component="p" className="error" />
+              </div>
 
-            <div className="input-group">
-              <Field as="textarea" name="message" placeholder="Your Message" />
-              <ErrorMessage name="message" component="p" className="error" />
-            </div>
+              <div className="input-group">
+                <Field
+                  as="textarea"
+                  name="message"
+                  placeholder="Your Message"
+                />
+                <ErrorMessage name="message" component="p" className="error" />
+              </div>
 
-            <button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Sending..." : "Send Message"}
-            </button>
-          </Form>
-        )}
-      </Formik>
+              <button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </button>
+            </Form>
+          )}
+        </Formik>
+      </div>
     </section>
   );
 };

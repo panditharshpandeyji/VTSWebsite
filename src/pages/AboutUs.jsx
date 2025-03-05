@@ -4,8 +4,14 @@ import coursesImg from "../assets/missionImage.jpg";
 import missionImg from "../assets/missionImage.jpg";
 import whyChooseUsImg from "../assets/coursesImage.jpg";
 import joinUsImg from "../assets/joinImage.jpg";
+import mission45 from "../assets/mission45.jpg";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
+  const startHandler = () => {
+    navigate("/courses");
+  };
   return (
     <div className="about-page">
       {/* Our Mission Section */}
@@ -19,7 +25,7 @@ const About = () => {
           </p>
         </div>
         <div className="image-container">
-          <img src={missionImg} alt="Our Mission" />
+          <img src={mission45} alt="Our Mission" />
         </div>
       </section>
 
@@ -65,7 +71,9 @@ const About = () => {
             Start your journey towards a successful tech career with VTS. Enroll
             today and build the future!
           </p>
-          <button className="join-btn">Get Started</button>
+          <button className="join-btn" onClick={startHandler}>
+            Get Started
+          </button>
         </div>
       </section>
     </div>

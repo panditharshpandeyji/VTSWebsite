@@ -42,7 +42,6 @@ const HomePage = () => {
         </div>
       </section>
       <Courses />
-      <ContactUs />
     </div>
   );
 };

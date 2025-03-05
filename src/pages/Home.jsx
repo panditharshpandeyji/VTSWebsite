@@ -16,33 +16,35 @@ const HomePage = () => {
   };
 
   return (
-    <div className="homepage">
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="hero-content">
-          <motion.h1
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2 }}
-            className="hero-title"
-          >
-            Master <span className="highlight">Software Development</span> with
-            VTS
-          </motion.h1>
-          <p className="hero-text">
-            Unlock your potential with expert-led courses in programming,
-            full-stack development, and data structures.
-          </p>
-          <button className="join-btn" onClick={handleJoinClick}>
-            Join Now
-          </button>
-        </div>
-        <div className="hero-image">
-          <img src={student} alt="Learning" />
-        </div>
-      </section>
+    <>
+      <div className="homepage">
+        {/* Hero Section */}
+        <section className="hero">
+          <div className="hero-content">
+            <motion.h1
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 2 }}
+              className="hero-title"
+            >
+              Master <span className="highlight">Software Development</span>{" "}
+              with VTS
+            </motion.h1>
+            <p className="hero-text">
+              Unlock your potential with expert-led courses in programming,
+              full-stack development, and data structures.
+            </p>
+            <button className="join-btn" onClick={handleJoinClick}>
+              Join Now
+            </button>
+          </div>
+          <div className="hero-image">
+            <img src={student} alt="Learning" />
+          </div>
+        </section>
+      </div>
       <Courses />
-    </div>
+    </>
   );
 };
 

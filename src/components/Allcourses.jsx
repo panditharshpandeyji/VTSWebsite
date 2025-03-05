@@ -13,27 +13,28 @@ const Courses = () => {
   };
 
   return (
-    <section className="courses">
-      <h2 className="section-title">Our Courses</h2>
-      <div className="courses-container">
-        {courses.map((course) => (
-          <div className="course-card" key={course.id}>
-            <img src={course.image} alt={course.title} />
-            <h3>{course.title}</h3>
-            <p>{course.description}</p>
-            <button
-              className="learn-more"
-              onClick={() => handleCourseClick(course.id)}
-            >
-              <Link to={`/course/${course.id}`} className="learn-more"></Link>
-              Learn More →
-            </button>
-          </div>
-        ))}
-      </div>
-
+    <>
+      <section className="courses">
+        <h2 className="section-title">Our Courses</h2>
+        <div className="courses-container">
+          {courses.map((course) => (
+            <div className="course-card" key={course.id}>
+              <img src={course.image} alt={course.title} />
+              <h3>{course.title}</h3>
+              <p>{course.description}</p>
+              <button
+                className="learn-more"
+                onClick={() => handleCourseClick(course.id)}
+              >
+                <Link to={`/course/${course.id}`} className="learn-more"></Link>
+                Learn More →
+              </button>
+            </div>
+          ))}
+        </div>
+      </section>
       <ContactUs />
-    </section>
+    </>
   );
 };
 
